@@ -1,0 +1,49 @@
+{
+  "workersList": [
+    {
+      "worker": {
+        "companyName": "Topiczoom",
+        "email": "fstorie0@topiczoom.com",
+        "id": 0,
+        "image": "http://dummyimage.com/250x250.jpg/ccccff/000000",
+        "name": "Frans Storie"
+      }
+    },
+    {
+      "worker": {
+        "companyName": "Gabspot",
+        "email": "fbrogan1@Gabspot.uk",
+        "id": 1,
+        "image": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "Fredi Brogan"
+      }
+    },
+    {
+      "worker": {
+        "companyName": "Yadel",
+        "email": "rcharrett2@yadel.com",
+        "id": 2,
+        "image": "http://dummyimage.com/250x250.jpg/004444/ffffff",
+        "name": "Randal Charrett"
+      }
+    },
+    {
+      "worker": {
+        "companyName": "Statcounter",
+        "email": "lmichel3@statcounter.com",
+        "id": 3,
+        "image": "http://dummyimage.com/250x250.jpg/aa00ff/ffffff",
+        "name": "Lynnell Michel"
+      }
+    },
+    {
+      "worker": {
+        "companyName": "Wordify",
+        "email": "agalier4@wordify.com",
+        "id": 4,
+        "image": "http://dummyimage.com/250x250.jpg/ff4444/ffffff",
+        "name": "Ashien Galier"
+      }
+    }
+  ]
+}

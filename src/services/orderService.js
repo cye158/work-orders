@@ -1,5 +1,7 @@
+/* Uncomment this when using the actual API from the config.json
 import http from "./httpService";
 import { apiUrl } from "./config.json";
+
 
 const apiEndPoint = `${apiUrl}/assessment`;
 
@@ -14,6 +16,27 @@ export function getOrders() {
 export function getWorker(id) {
   return http.get(workerUrl(id));
 }
+
+*/
+
+/************************/
+/** Start of Fake API**/
+
+import { data } from "./fakeOrders.json";
+import { workersList } from "./fakeWorkers.json";
+import _ from "lodash";
+
+export function getOrders() {
+  return Promise.resolve({ data });
+}
+
+export function getWorker(id) {
+  const result = _.find(workersList, { worker: { id } });
+  return Promise.resolve({ data: result });
+}
+
+/** End of the Fake API**/
+/************************/
 
 export default {
   getOrders,

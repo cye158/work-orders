@@ -1,0 +1,9 @@
+.orders {
+  height: 92.5vh;
+  overflow-y: scroll;
+}
+
+.order {
+  min-width: 350px;
+  min-height: 250px;
+}

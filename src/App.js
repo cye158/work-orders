@@ -5,11 +5,9 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div>
-        <main className="container">
-          <Orders />
-        </main>
-      </div>
+      <main className="App container-fluid justify-content-center p-0">
+        <Orders />
+      </main>
     );
   }
 }

@@ -1,26 +1,18 @@
-/*import React, { Component } from "react";
+import React from "react";
 
-class WorkerForm extends Component {
-  state = { worker: {} };
-
-  componentDidMount() {
-    const { data: worker } = this.props.workerId;
-    this.setState({ worker });
-  }
-
-  render() {
-    const { worker } = this.state;
-    //console.log(worker);
-    return (
-      <div>
-        <img src={worker.image} alt={worker.image} />
-        <h3>{worker.name}</h3>
-        <p>{worker.companyName}</p>
+const WorkerForm = ({ worker }) => {
+  return (
+    <div className="row m-1">
+      <div className="col-5 d-flex">
+        <img src={worker.image} alt={worker.image} className="rounded-circle" />
+      </div>
+      <div className="col-7 align-self-center">
+        <h5>{worker.name}</h5>
+        <h6>{worker.companyName}</h6>
         <p>{worker.email}</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default WorkerForm;
-*/

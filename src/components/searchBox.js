@@ -1,15 +1,17 @@
 import React from "react";
 
-const SearchBox = ({ value, onChange }) => {
+const SearchBox = ({ query, onChange }) => {
   return (
-    <input
-      type="text"
-      name="query"
-      value={value}
-      className="form-control"
-      onChange={e => onChange(e.currentTarget.value)}
-      placeholder="Search by Worker Name..."
-    />
+    <div className="col-10">
+      <input
+        className="form-control"
+        type="text"
+        name="query"
+        value={query}
+        onChange={e => onChange(e.currentTarget.value)}
+        placeholder="Search by Worker Name..."
+      />
+    </div>
   );
 };
 
