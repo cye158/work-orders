@@ -30,7 +30,6 @@ class Orders extends Component {
         const {
           data: { worker }
         } = await getWorker(order.workerId);
-        console.log(worker);
         let newOrderWorker = { ...order, worker };
         return newOrderWorker;
       });
