@@ -1,4 +1,6 @@
-/* Uncomment this when using the actual API from the config.json
+/* 
+ * Uncomment this block when using the actual API from the config.json
+
 import http from "./httpService";
 import { apiUrl } from "./config.json";
 
@@ -17,9 +19,10 @@ export function getWorker(id) {
   return http.get(workerUrl(id));
 }
 
+* Uncomment this block when using the actual API from the config.json
 */
 
-/************************/
+/*** ##################### ***/
 /** Start of Fake API**/
 
 import { data } from "./fakeOrders.json";
@@ -36,7 +39,7 @@ export function getWorker(id) {
 }
 
 /** End of the Fake API**/
-/************************/
+/*** ##################### ***/
 
 export default {
   getOrders,
