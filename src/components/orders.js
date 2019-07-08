@@ -11,6 +11,7 @@ import "./orders.css";
 class Orders extends Component {
   state = {
     orders: [],
+    workers: [],
     searchQuery: "",
     sortOptions: [
       { type: "asc", name: "Earliest" },
@@ -25,22 +26,41 @@ class Orders extends Component {
         data: { orders }
       } = await getOrders();
       this.setState({ orders });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-      const promises = orders.map(async order => {
-        const {
-          data: { worker }
-        } = await getWorker(order.workerId);
-        let newOrderWorker = { ...order, worker };
-        return newOrderWorker;
-      });
+  populateWorkers = async () => {
+    let workersIdArr = _.sortedUniq(
+      this.state.orders.map(order => order.workerId).sort()
+    );
 
-      const newOrders = await Promise.all(promises);
-      newOrders.then(this.setState({ orders: newOrders }));
-    } catch (err) {}
+    const promises = workersIdArr.map(async id => {
+      const {
+        data: { worker }
+      } = await getWorker(id);
+      return worker;
+    });
+    const workers = await Promise.all(promises);
+    this.setState({ workers });
+  };
+
+  populateOrdersWithWorkers = async () => {
+    const promises = this.state.orders.map(async order => {
+      const worker = _.find(this.state.workers, { id: order.workerId });
+
+      let newOrderWorker = { ...order, worker };
+      return newOrderWorker;
+    });
+    const newOrders = await Promise.all(promises);
+    this.setState({ orders: newOrders });
   };
 
   async componentDidMount() {
     await this.populateOrders();
+    await this.populateWorkers();
+    await this.populateOrdersWithWorkers();
   }
 
   getPageData = () => {

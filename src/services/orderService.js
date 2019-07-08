@@ -1,9 +1,9 @@
-/* 
+/*
  * Uncomment this block when using the actual API from the config.json
+ *
 
 import http from "./httpService";
 import { apiUrl } from "./config.json";
-
 
 const apiEndPoint = `${apiUrl}/assessment`;
 
@@ -19,8 +19,9 @@ export function getWorker(id) {
   return http.get(workerUrl(id));
 }
 
-* Uncomment this block when using the actual API from the config.json
-*/
+/*
+ * Uncomment this block when using the actual API from the config.json
+ */
 
 /*** ##################### ***/
 /** Start of Fake API**/
