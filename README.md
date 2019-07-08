@@ -5,7 +5,7 @@
 An Order Listings Front End Application. Displays a list of orders retrieved from API. Each order has worker id assigned, where the worker's information can also be retrieved from the API. Orders can be filtered by worker's name and be sorted by date.
 
 ![work order png](./public/sample.png "work order screenshot")
-_Above image is a screenshot of the app on a Firefox browser_
+_(Above image is a screenshot of the app on a Firefox browser)_
 
 ## How To Use
 
