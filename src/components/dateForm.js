@@ -4,9 +4,9 @@ const DateForm = ({ epochTime }) => {
   const date = new Date(0);
   date.setUTCSeconds(epochTime);
   return (
-    <div className="text-right font-italic">
-      <sub>{date.toUTCString()}</sub>
-    </div>
+    <p className="small mb-0 text-right small border-info border-top font-weight-light">
+      {date.toUTCString()}
+    </p>
   );
 };
 

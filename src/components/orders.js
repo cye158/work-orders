@@ -105,7 +105,7 @@ class Orders extends Component {
                   order.worker && (
                     <li
                       key={order.id}
-                      className="container col-10 col-sm-5 col-md-3 m-2 p-3 order border rounded bg-light"
+                      className="container col-10 col-sm-5 col-md-3 m-3 p-3 order border rounded bg-light"
                     >
                       <OrderForm order={order} />
                       <WorkerForm worker={order.worker} />
